@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ร้านค้าออนไลน์มืออาชีพ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-blue-600">ร้านค้าออนไลน์ของฉัน</h1>
+      <nav>
+        <ul class="flex space-x-6 text-gray-700 font-medium">
+          <li><a href="#home" class="hover:text-blue-600 transition">หน้าแรก</a></li>
+          <li><a href="#products" class="hover:text-blue-600 transition">สินค้า</a></li>
+          <li><a href="#contact" class="hover:text-blue-600 transition">ติดต่อเรา</a></li>
+          <li><a href="#cart" class="hover:text-blue-600 transition">ตะกร้า (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="text-center py-32 bg-gradient-to-r from-blue-200 to-blue-400">
+    <h2 class="text-5xl font-extrabold mb-4 text-white drop-shadow-lg">ยินดีต้อนรับสู่ร้านของเรา</h2>
+    <p class="text-xl text-white drop-shadow-md">สินค้าคุณภาพดี ราคาย่อมเยา จัดส่งรวดเร็วถึงมือคุณ</p>
+    <a href="#products" class="mt-8 inline-block bg-white text-blue-600 font-bold px-6 py-3 rounded shadow hover:bg-blue-600 hover:text-white transition">ชมสินค้า</a>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="container mx-auto px-6 py-20">
+    <h2 class="text-4xl font-bold mb-12 text-center text-gray-800">สินค้าของเรา</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <!-- Product Template -->
+      <div class="bg-white rounded-lg shadow-lg p-4 group">
+        <div class="relative overflow-hidden rounded cursor-pointer">
+          <img src="https://via.placeholder.com/400x300?text=สินค้า1-1" alt="สินค้า 1" class="rounded w-full h-64 object-cover slide-image transition-transform duration-300 group-hover:scale-105">
+          <button class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white px-2 py-1 rounded prev-slide">&lt;</button>
+          <button class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white px-2 py-1 rounded next-slide">&gt;</button>
+        </div>
+        <h3 class="font-bold text-2xl my-3 text-gray-800">สินค้า 1</h3>
+        <p class="text-gray-600 mb-2">รายละเอียดสินค้า 1 แบบสวย ๆ</p>
+        <p class="font-bold text-blue-600 mb-3">250 บาท</p>
+        <div class="flex items-center mb-3">
+          <label class="mr-2 font-medium">จำนวน:</label>
+          <input type="number" min="1" value="1" class="w-16 border rounded px-2 py-1 quantity">
+        </div>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full add-to-cart" data-name="สินค้า 1" data-price="250">เพิ่มลงตะกร้า</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-4 group">
+        <div class="relative overflow-hidden rounded cursor-pointer">
+          <img src="https://via.placeholder.com/400x300?text=สินค้า2-1" alt="สินค้า 2" class="rounded w-full h-64 object-cover slide-image transition-transform duration-300 group-hover:scale-105">
+          <button class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white px-2 py-1 rounded prev-slide">&lt;</button>
+          <button class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white px-2 py-1 rounded next-slide">&gt;</button>
+        </div>
+        <h3 class="font-bold text-2xl my-3 text-gray-800">สินค้า 2</h3>
+        <p class="text-gray-600 mb-2">รายละเอียดสินค้า 2 แบบสวย ๆ</p>
+        <p class="font-bold text-blue-600 mb-3">350 บาท</p>
+        <div class="flex items-center mb-3">
+          <label class="mr-2 font-medium">จำนวน:</label>
+          <input type="number" min="1" value="1" class="w-16 border rounded px-2 py-1 quantity">
+        </div>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full add-to-cart" data-name="สินค้า 2" data-price="350">เพิ่มลงตะกร้า</button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-4 group">
+        <div class="relative overflow-hidden rounded cursor-pointer">
+          <img src="https://via.placeholder.com/400x300?text=สินค้า3-1" alt="สินค้า 3" class="rounded w-full h-64 object-cover slide-image transition-transform duration-300 group-hover:scale-105">
+          <button class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white px-2 py-1 rounded prev-slide">&lt;</button>
+          <button class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white px-2 py-1 rounded next-slide">&gt;</button>
+        </div>
+        <h3 class="font-bold text-2xl my-3 text-gray-800">สินค้า 3</h3>
+        <p class="text-gray-600 mb-2">รายละเอียดสินค้า 3 แบบสวย ๆ</p>
+        <p class="font-bold text-blue-600 mb-3">150 บาท</p>
+        <div class="flex items-center mb-3">
+          <label class="mr-2 font-medium">จำนวน:</label>
+          <input type="number" min="1" value="1" class="w-16 border rounded px-2 py-1 quantity">
+        </div>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full add-to-cart" data-name="สินค้า 3" data-price="150">เพิ่มลงตะกร้า</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart" class="container mx-auto px-6 py-20 bg-gray-200 rounded-lg shadow-inner">
+    <h2 class="text-4xl font-bold mb-6 text-center text-gray-800">ตะกร้าสินค้า</h2>
+    <div id="cart-items" class="mb-6"></div>
+    <p class="text-right font-bold text-2xl mb-6 text-gray-800">รวมทั้งหมด: <span id="cart-total">0</span> บาท</p>
+    <button id="checkout" class="bg-green-600 text-white px-8 py-3 rounded hover:bg-green-700 w-full md:w-auto block mx-auto transition">สั่งซื้อผ่าน LINE</button>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gradient-to-r from-blue-100 to-blue-200 py-20 mt-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-6 text-gray-800">ติดต่อเรา</h2>
+      <p class="mb-3 text-gray-700">Line: @ร้านค้าออนไลน์</p>
+      <p class="mb-3 text-gray-700">โทร: 012-345-6789</p>
+      <p class="text-gray-700">Email: contact@myshop.com</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow py-6 mt-10">
+    <p class="text-center text-gray-700">&copy; 2025 ร้านค้าออนไลน์ของฉัน. สงวนลิขสิทธิ์</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    let cart = [];
+
+    function updateCart() {
+      const cartItems = document.getElementById('cart-items');
+      const cartTotal = document.getElementById('cart-total');
+      const cartCount = document.getElementById('cart-count');
+
+      cartItems.innerHTML = '';
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        total += item.price * item.quantity;
+        const div = document.createElement('div');
+        div.className = "flex justify-between mb-2 bg-white p-2 rounded shadow items-center";
+        div.innerHTML = `
+          <span>${item.name} - ${item.price} x ${item.quantity} = ${item.price * item.quantity} บาท</span>
+          <button onclick="removeItem(${index})" class="text-red-600 hover:text-red-800">ลบ</button>
+        `;
+        cartItems.appendChild(div);
+      });
+
+      cartTotal.textContent = total;
+      cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+
+    document.querySelectorAll('.add-to-cart').forEach((button) => {
+      button.addEventListener('click', () => {
+        const name = button.getAttribute('data-name');
+        const price = parseInt(button.getAttribute('data-price'));
+        const quantity = parseInt(button.previousElementSibling.querySelector('.quantity').value);
+        cart.push({name, price, quantity});
+        updateCart();
+      });
+    });
+
+    document.getElementById('checkout').addEventListener('click', () => {
+      if(cart.length === 0){
+        alert('กรุณาเลือกสินค้าก่อนสั่งซื้อ');
+        return;
+      }
+      let message = 'สั่งซื้อสินค้าดังนี้:%0A';
+      cart.forEach(item => {
+        message += `- ${item.name} (${item.quantity} x ${item.price} บาท)%0A`;
+      });
+      message += `รวมทั้งหมด: ${cart.reduce((sum, item) => sum + item.price * item.quantity, 0)} บาท`;
+      window.open('https://line.me/R/ti/p/@ร้านค้าออนไลน์?text=' + message);
+    });
+
+    // สไลด์โชว์ + Lightbox
+    document.querySelectorAll('.slide-image').forEach((img, index) => {
+      const parent = img.parentElement;
+      const productIndex = Math.floor(index / 1) + 1; // 1-based
+      const images = [
+        `https://via.placeholder.com/400x300?text=สินค้า${productIndex}-1`,
+        `https://via.placeholder.com/400x300?text=สินค้า${productIndex}-2`,
+        `https://via.placeholder.com/400x300?text=สินค้า${productIndex}-3`
+      ];
+      let current = 0;
+
+      const prevBtn = parent.querySelector('.prev-slide');
+      const nextBtn = parent.querySelector('.next-slide');
+
+      prevBtn.addEventListener('click', () => {
+        current = (current - 1 + images.length) % images.length;
+        img.src = images[current];
+      });
+
+      nextBtn.addEventListener('click', () => {
+        current = (current + 1) % images.length;
+        img.src = images[current];
+      });
+
+      img.addEventListener('click', () => {
+        const modal = document.createElement('div');
+        modal.className = 'fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center
